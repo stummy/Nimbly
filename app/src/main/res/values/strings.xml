@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Nimbly</string>
+    <string name="title_location">Location</string>
+    <string name="title_weather">Weather</string>
+    <string name="title_map">Map</string>
+    <string name="address">Address</string>
+    <string name="btn_get_coordinates">Get Coordinates</string>
+    <string name="text_coordinates"> </string>
+    <string name="text_coordinates_title">Coordinates:</string>
+    <string name="text_enter_address">"Enter Address</string>
+    <string name="text_invalid_address">Invalid address. Coordinates could not be found.</string>
+    <string name="text_invalid_weather">No weather available</string>
+</resources>
