@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Nimbly</string>
+    <string name="app_name">nimbus</string>
     <string name="title_location">Location</string>
     <string name="title_weather">Weather</string>
     <string name="title_map">Map</string>

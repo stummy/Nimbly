@@ -1,6 +1,5 @@
-package com.example.nimbly.ui.location;
+package com.example.nimbus.ui.location;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.location.Address;
 import android.os.Bundle;
@@ -10,8 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.nimbly.Constants;
-import com.example.nimbly.GeocodeIntentService;
+import com.example.nimbus.Constants;
+import com.example.nimbus.GeocodeIntentService;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -20,15 +19,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.example.nimbly.R;
+import com.example.nimbus.R;
 
 
-import static com.example.nimbly.MainActivity.longitude;
-import static com.example.nimbly.MainActivity.latitude;
-import static com.example.nimbly.MainActivity.city;
+import static com.example.nimbus.MainActivity.longitude;
+import static com.example.nimbus.MainActivity.latitude;
+import static com.example.nimbus.MainActivity.city;
 
 public class LocationFragment extends Fragment {
     private AddressResultReceiver mResultReceiver;

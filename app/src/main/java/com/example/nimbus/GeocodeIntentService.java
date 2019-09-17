@@ -1,4 +1,4 @@
-package com.example.nimbly;
+package com.example.nimbus;
 
 import android.app.IntentService;
 import android.content.Intent;
@@ -9,8 +9,6 @@ import android.os.Bundle;
 import android.os.ResultReceiver;
 import android.text.TextUtils;
 import android.util.Log;
-
-import com.example.nimbly.Constants;
 
 import java.io.IOException;
 import java.util.ArrayList;

@@ -1,19 +1,14 @@
-package com.example.nimbly;
+package com.example.nimbus;
 
 import android.os.Bundle;
 
-import com.example.nimbly.ui.location.LocationFragment;
-import com.example.nimbly.ui.map.MapFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-
-import java.util.Map;
 
 public class MainActivity extends AppCompatActivity{
     public static double latitude;

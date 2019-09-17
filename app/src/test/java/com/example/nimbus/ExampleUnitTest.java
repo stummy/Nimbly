@@ -1,4 +1,4 @@
-package com.example.nimbly;
+package com.example.nimbus;
 
 import org.junit.Test;
 

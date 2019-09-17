@@ -1,6 +1,5 @@
-package com.example.nimbly.ui.weather;
+package com.example.nimbus.ui.weather;
 
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,8 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.example.nimbly.Constants;
-import com.example.nimbly.R;
+import com.example.nimbus.Constants;
+import com.example.nimbus.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -23,9 +22,9 @@ import okhttp3.Callback;
 import okhttp3.OkHttpClient;
 import okhttp3.Response;
 
-import static com.example.nimbly.MainActivity.longitude;
-import static com.example.nimbly.MainActivity.latitude;
-import static com.example.nimbly.MainActivity.city;
+import static com.example.nimbus.MainActivity.longitude;
+import static com.example.nimbus.MainActivity.latitude;
+import static com.example.nimbus.MainActivity.city;
 
 public class WeatherFragment extends Fragment {
 

@@ -1,4 +1,4 @@
-package com.example.nimbly;
+package com.example.nimbus;
 
 public final class Constants {
     public static final int SUCCESS_RESULT = 0;

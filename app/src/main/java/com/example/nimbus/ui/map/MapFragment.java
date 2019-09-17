@@ -1,4 +1,4 @@
-package com.example.nimbly.ui.map;
+package com.example.nimbus.ui.map;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -18,11 +18,11 @@ import com.google.android.gms.maps.UiSettings;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-import com.example.nimbly.R;
+import com.example.nimbus.R;
 
-import static com.example.nimbly.MainActivity.longitude;
-import static com.example.nimbly.MainActivity.latitude;
-import static com.example.nimbly.MainActivity.city;
+import static com.example.nimbus.MainActivity.longitude;
+import static com.example.nimbus.MainActivity.latitude;
+import static com.example.nimbus.MainActivity.city;
 
 public class MapFragment extends Fragment implements OnMapReadyCallback{
 
