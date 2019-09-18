@@ -28,9 +28,13 @@ import static com.example.nimbus.MainActivity.longitude;
 import static com.example.nimbus.MainActivity.latitude;
 import static com.example.nimbus.MainActivity.city;
 
+/**
+ * Fragment to display a location (coordinates) of an address input.
+ *
+ * @author/driver Zahra Atzuri
+ */
 public class LocationFragment extends Fragment {
     private AddressResultReceiver mResultReceiver;
-
     private MaterialButton showCoordinatesBtn;
     private TextInputEditText addressEdit;
     private TextView coordinatesText;
@@ -64,6 +68,9 @@ public class LocationFragment extends Fragment {
         return root;
     }
 
+    /**
+     * Starts the GeocodeIntentService and sends the address.
+     */
     protected void startIntentService() {
         Intent intent = new Intent(getActivity(), GeocodeIntentService.class);
         intent.putExtra(Constants.RECEIVER, mResultReceiver);
@@ -76,18 +83,27 @@ public class LocationFragment extends Fragment {
         getActivity().startService(intent);
     }
 
+    /**
+     * Receiver to accept address from GeocodeIntentService.
+     */
     class AddressResultReceiver extends ResultReceiver {
+        /* Constructor for Address Receiver */
         public AddressResultReceiver(Handler handler) {
             super(handler);
         }
 
+        /**
+         * Receives an address from a bundle of data results.
+         * Then sets appropriate TextView based on validity of data.
+         * @param resultCode Success or failed code as an int.
+         * @param resultData Data containing address as a bundle.
+         */
         @Override
         protected void onReceiveResult(int resultCode, Bundle resultData) {
             if (resultData == null) {
                 Toast.makeText(getActivity(), "Error retrieving data",
                         Toast.LENGTH_LONG).show();;
             }
-
             if (resultCode == Constants.SUCCESS_RESULT) {
                 final Address address = resultData.getParcelable(Constants.RESULT_ADDRESS);
                 latitude = address.getLatitude();

@@ -15,8 +15,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+/**
+ * IntentService to enable geocoding - gets coordinates for an address.
+ * Code based on the Android Developer Guide:
+ *      https://developer.android.com/training/location/display-address
+ *
+ * @author/driver Zahra Atzuri
+ */
 public class GeocodeIntentService extends IntentService {
-
     protected ResultReceiver resultReceiver;
     private static final String TAG = "GEO_ADD_SERVICE";
 

@@ -24,6 +24,13 @@ import static com.example.nimbus.MainActivity.longitude;
 import static com.example.nimbus.MainActivity.latitude;
 import static com.example.nimbus.MainActivity.city;
 
+/**
+ * Fragment to display a marker on a map.
+ * Code based on the Android Developer Guide:
+ *      https://developers.google.com/maps/documentation/android-sdk/start
+ *
+ * @author/driver Kayla Tran
+ */
 public class MapFragment extends Fragment implements OnMapReadyCallback{
 
     private GoogleMap mGoogleMap;
@@ -46,7 +53,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback{
         SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-
     }
 
     @Override

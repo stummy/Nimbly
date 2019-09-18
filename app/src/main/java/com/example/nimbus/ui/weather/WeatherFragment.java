@@ -26,8 +26,13 @@ import static com.example.nimbus.MainActivity.longitude;
 import static com.example.nimbus.MainActivity.latitude;
 import static com.example.nimbus.MainActivity.city;
 
+/**
+ * Fragment to display the weather of an address.
+ * Uses the DarkSky API
+ *
+ * @author/driver Kayla Tran
+ */
 public class WeatherFragment extends Fragment {
-
     private String temperature;
     private String humidity;
     private String wind;
@@ -54,6 +59,7 @@ public class WeatherFragment extends Fragment {
         weatherTemp = root.findViewById(R.id.text_weather_temp);
         weatherStatus = root.findViewById(R.id.text_weather);
 
+        // Set up call to DarkSky API
         String url = "https://api.darksky.net/forecast/" + Constants.NIGHT_SKY_API_KEY + "/"
                 + latitude + "," + longitude;
         OkHttpClient client = new OkHttpClient();
@@ -61,12 +67,25 @@ public class WeatherFragment extends Fragment {
                 .url(url)
                 .build();
 
+
+        // Requests call to DarkSky API
         client.newCall(request).enqueue(new Callback() {
+            /**
+             * Failure from call
+             * @param call Call of the data
+             * @param e Exception thrown
+             */
             @Override
             public void onFailure(Call call, IOException e) {
                 e.printStackTrace();
             }
 
+            /**
+             * Response from call - JSON parses data from DarkSky API
+             * @param call Call of the data
+             * @param response The data received from the API
+             * @throws IOException Exception thrown
+             */
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 if(response.isSuccessful()){
@@ -103,15 +122,11 @@ public class WeatherFragment extends Fragment {
                                         "Precipitation Probability: " + precipProbability + "%\n";
                                 weatherText.setText(weather);
                             }
-
-
                         }
                     });
                 }
-
             }
         });
-
         return root;
     }
 }

@@ -10,6 +10,11 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+/**
+ * Activity that ties all the fragments together
+ *
+ * @author/driver Kayla Tran
+ */
 public class MainActivity extends AppCompatActivity{
     public static double latitude;
     public static double longitude;
